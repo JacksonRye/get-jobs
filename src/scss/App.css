@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Baloo Da 2", cursive;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: #0000007e 1px solid;
+  padding: 0.5rem;
+  background: #f6f7fb;
+}
+
+input[type="checkbox"]:checked {
+  color: #fff;
+  background: #1279ff;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+}
+
+.Header {
+  margin: 0.5rem 1rem 2rem 0.5rem;
+}
+
+.Header #job {
+  font-weight: 100;
+}
+
+.Search {
+  margin: 0 0.5rem;
+}
+
+.Search .search-container {
+  background: url("../images/backgroundImg.png");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  padding: 3rem 1rem;
+}
+
+.Search .search-container .input-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.Search .search-container .input-container i {
+  z-index: 5;
+  position: relative;
+  left: 6%;
+  opacity: 0.4;
+}
+
+.Search .search-container .input-container input,
+.Search .search-container .input-container button {
+  padding: 1rem 0;
+}
+
+.Search .search-container .input-container input {
+  border: none;
+  border-radius: 5px;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.Search .search-container .input-container button {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  position: absolute;
+  right: 16%;
+  z-index: 4;
+  padding: 0.8rem 0;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  background: #1279ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.Search .fulltime {
+  margin: 2rem 0;
+}
+
+.Location {
+  margin: 0 0.5rem;
+}
+
+.Location input[type="text"] {
+  width: 100%;
+  margin: 1rem auto;
+  border: none;
+  border-bottom: 1px solid #00000028;
+  border-radius: 4px;
+  padding: 0.8rem 0;
+}
+
+.Location .box {
+  margin: 1rem 0;
+}
+
+.Job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  margin: 0 0.5rem 1.2rem 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #00000028;
+  border-radius: 4px;
+}
+
+.Job .image-container {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.Job .info-container {
+  line-height: 2rem;
+}
+
+.Job .info-container #title {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+
+.Job .info-container #fulltime {
+  display: inline-block;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.Job .info-container .location-time {
+  opacity: 0.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body {
+  width: 100%;
+  background: #f6f7fb;
+}
+
+footer {
+  text-align: center;
+  opacity: 0.4;
+}
+/*# sourceMappingURL=App.css.map */

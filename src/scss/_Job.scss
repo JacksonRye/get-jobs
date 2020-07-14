@@ -1,0 +1,38 @@
+.Job {
+  display: flex;
+  background: white;
+  margin: 0 0.5rem 1.2rem 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid $shadow-color;
+  border-radius: 4px;
+
+  .image-container {
+    flex: 0.5;
+    align-self: flex-start;
+  }
+
+  .info-container {
+    line-height: 2rem;
+
+    #title {
+      font-size: 1.8rem;
+      font-weight: lighter;
+      opacity: 0.8;
+    }
+
+    #fulltime {
+      // width: 30%;
+      display: inline-block;
+      text-align: center;
+      padding: 0.2rem;
+      border: 2px solid black;
+      border-radius: 4px;
+    }
+
+    .location-time {
+      opacity: 0.4;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "config";
+@import "Header";
+@import "Search";
+@import "Location";
+@import "City";
+@import "JobList";
+@import "Job";
+
+
+body {
+    width: 100%;
+    background: $primary-color;
+}
+
+footer {
+    text-align: center;
+    opacity: 0.4;
+}
