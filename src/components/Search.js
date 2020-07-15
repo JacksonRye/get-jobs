@@ -5,8 +5,7 @@ const Search = () => {
     <div className="Search">
       <div className="search-container">
         <form className="input-container">
-          <i className="material-icons">work_outline</i>
-          <input type="text" placeholder="        Title, Company, Expertise" />
+          <input type="text" placeholder="Title, Company, Expertise" />
           <button>Search</button>
         </form>
       </div>

@@ -1,47 +1,21 @@
-import React from "react";
-import Job from './Job'
+import React, { useContext, useEffect } from "react";
+import Job from "./Job";
+import { GlobalContext } from "../context/GlobalState";
 
 const JobList = () => {
-  const jobs = [
-    {
-      name: "Fanta",
-      title: "Senior Engineer",
-      fulltime: false,
-      image: "./images/fanta.jpg",
-      location: "Ny",
-      posted: new Date(),
-    },
-    {
-      name: "Fanta",
-      title: "Senior Engineer",
-      fulltime: true,
-      image: "./images/fanta.jpg",
-      location: "Ny",
-      posted: new Date(),
-    },
-    {
-      name: "Fanta",
-      title: "Senior Engineer",
-      fulltime: true,
-      image: "",
-      location: "Ny",
-      posted: new Date(),
-    },
-    {
-      name: "Fanta",
-      title: "Senior Engineer",
-      fulltime: true,
-      image: "./images/fanta.jpg",
-      location: "Ny",
-      posted: new Date(),
-    },
-  ];
+  const { jobs, getJobs } = useContext(GlobalContext);
 
-  return <div className="JobList">
+  useEffect(() => {
+    getJobs();
+  }, []);
+
+  return (
+    <div className="JobList">
       {jobs.map((job, id) => (
-          <Job key={id} job={job} />
+        <Job key={id} job={job} />
       ))}
-  </div>;
+    </div>
+  );
 };
 
 export default JobList;

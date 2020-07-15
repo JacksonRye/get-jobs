@@ -19,25 +19,6 @@ h6 {
   font-family: "Baloo Da 2", cursive;
 }
 
-input[type="checkbox"] {
-  margin-right: 0.8rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: #0000007e 1px solid;
-  padding: 0.5rem;
-  background: #f6f7fb;
-}
-
-input[type="checkbox"]:checked {
-  color: #fff;
-  background: #1279ff;
-}
-
-input[type="checkbox"]::after {
-  content: "";
-}
-
 .Header {
   margin: 0.5rem 1rem 2rem 0.5rem;
 }
@@ -111,6 +92,7 @@ input[type="checkbox"]::after {
 
 .Search .fulltime {
   margin: 2rem 0;
+  border: none;
 }
 
 .Location {
@@ -130,6 +112,10 @@ input[type="checkbox"]::after {
   margin: 1rem 0;
 }
 
+.JobList {
+  width: 100%;
+}
+
 .Job {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,18 +125,25 @@ input[type="checkbox"]::after {
   padding: 0.5rem 0.6rem;
   border-bottom: 1px solid #00000028;
   border-radius: 4px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Job .image-container {
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
+  -webkit-box-flex: 0.15;
+      -ms-flex: 0.15;
+          flex: 0.15;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
 .Job .info-container {
+  -webkit-box-flex: 0.85;
+      -ms-flex: 0.85;
+          flex: 0.85;
   line-height: 2rem;
+  width: 100%;
 }
 
 .Job .info-container #title {
@@ -159,15 +152,7 @@ input[type="checkbox"]::after {
   opacity: 0.8;
 }
 
-.Job .info-container #fulltime {
-  display: inline-block;
-  text-align: center;
-  padding: 0.2rem;
-  border: 2px solid black;
-  border-radius: 4px;
-}
-
-.Job .info-container .location-time {
+.Job .info-container .bottom .location-time {
   opacity: 0.4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,13 +162,175 @@ input[type="checkbox"]::after {
           justify-content: space-between;
 }
 
+.JobDetail {
+  margin: 0 0.5rem;
+}
+
+.JobDetail #back,
+.JobDetail .email {
+  color: #1279ff;
+}
+
+.JobDetail .back #back-to-search {
+  position: absolute;
+  top: 100px;
+}
+
+.JobDetail .apply {
+  margin: 2rem 0 1rem 0;
+  opacity: 0.4;
+  font-weight: 900;
+}
+
+.JobDetail h2 {
+  margin: 2rem 0 0 0;
+}
+
+.JobDetail #date {
+  margin: 0.8rem 0 0 0;
+  opacity: 0.4;
+}
+
+.JobDetail .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.JobDetail .head .image {
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+}
+
+.JobDetail .head #location {
+  opacity: 0.4;
+}
+
 body {
   width: 100%;
   background: #f6f7fb;
 }
 
+input[type="checkbox"] {
+  margin-right: 0.8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: #0000007e 1px solid;
+  padding: 0.5rem;
+  background: #f6f7fb;
+}
+
+input[type="checkbox"]:checked {
+  color: #fff;
+  background: #1279ff;
+}
+
+a {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.fulltime {
+  display: inline-block;
+  text-align: center;
+  padding: 0.2rem;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
 footer {
   text-align: center;
   opacity: 0.4;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .Home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Home .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Home .content .Location {
+    -webkit-box-flex: 0.3;
+        -ms-flex: 0.3;
+            flex: 0.3;
+  }
+  .Home .content .JobList {
+    -webkit-box-flex: 0.7;
+        -ms-flex: 0.7;
+            flex: 0.7;
+  }
+  .Job .image-container {
+    -webkit-box-flex: 0.2;
+        -ms-flex: 0.2;
+            flex: 0.2;
+  }
+  .Job .info-container {
+    -webkit-box-flex: 0.8;
+        -ms-flex: 0.8;
+            flex: 0.8;
+  }
+  .Job .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Job .bottom .location-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .Job .bottom .location-time #time {
+    margin: 0 0 0 2rem;
+  }
+  .JobDetail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .JobDetail .top {
+    -webkit-box-flex: 0.3;
+        -ms-flex: 0.3;
+            flex: 0.3;
+    margin: 0 4rem 0 2rem;
+  }
+  .JobDetail .content {
+    -webkit-box-flex: 0.7;
+        -ms-flex: 0.7;
+            flex: 0.7;
+    margin: 0 4rem 0 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */

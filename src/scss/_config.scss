@@ -23,20 +23,8 @@ h6 {
   font-family: "Baloo Da 2", cursive;
 }
 
-input[type="checkbox"] {
-  margin-right: 0.8rem;
-  appearance: none;
-  border: #0000007e 1px solid;
-  padding: 0.5rem;
-  background: $primary-color;
-}
-
-input[type="checkbox"]:checked {
-  // color: $primary-color;
-  color: #fff;
-  background: $secondary-color;
-}
-
-input[type="checkbox"]::after {
-  content: "";
+@mixin mediaXl {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
 }
